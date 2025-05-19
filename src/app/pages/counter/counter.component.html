@@ -1,0 +1,20 @@
+<h1>Mi contador</h1>
+@if (counterSignal() > 10) {
+  <span class="text-danger fs-1">El contador es mayor a 10</span>
+}@else {
+  <span class="text-success fs-1">El contador es menor a 10</span>
+}
+<h1>contador: {{counter}}</h1>
+<h1>contadorSignal: {{counterSignal()}}</h1>
+<br>
+
+<div class="container align-items-center justify-content-center">
+  <button class="btn btn-primary" (click)="decrement(1)">-</button>
+  <button class="btn btn-danger" (click)="increment(1)">+</button>
+  <button class="btn btn-warning" (click)="reset()">Reset</button>
+
+</div>
+
+
+
+

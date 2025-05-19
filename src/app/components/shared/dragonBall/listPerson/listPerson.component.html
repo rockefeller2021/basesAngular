@@ -1,0 +1,17 @@
+<h3>{{listName()}}</h3>
+        <ul class="list-group">
+          @for (item of characters(); track $index) {
+            @if (item.power > 10000) {
+            <li class="list-group-item mt-2">
+              <span>{{ $index + 1}}</span> - <span class="mx-2">{{ item.name }}</span>  <strong class="text-danger">{{ item.power }}</strong>
+              <span class="text-danger mx-2">Eres poderoso</span>
+            </li>
+            }
+            @else {
+              <li class="list-group-item mt-2">
+                <span>{{ $index + 1}}</span> - <span class="mx-2">{{ item.name }}</span>  <strong class="text-success">{{ item.power }}</strong>
+                <span class="text-success mx-2">Sigue entrenando</span>
+              </li>
+            }
+          }
+        </ul>
